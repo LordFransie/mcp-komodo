@@ -234,11 +234,12 @@ All 16 execute tools wait for the operation to complete and report its real outc
 </details>
 
 <details>
-<summary>Containers (1 tool)</summary>
+<summary>Containers (2 tools)</summary>
 
 | Tool | Description | Access | Hints |
 |------|-------------|--------|-------|
 | `komodo_get_container_log` | Get logs from any Docker container on a server | read-only | read-only, idempotent |
+| `komodo_list_containers` | Get list of all containers | read-only | read-only, idempotent |
 
 </details>
 
