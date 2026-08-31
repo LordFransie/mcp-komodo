@@ -10,7 +10,7 @@ describe("tool registration", () => {
     registerAllTools(server, makeMockClient(), makeConfig());
     const { client, cleanup } = await connectTestClient(server);
     const { tools } = await client.listTools();
-    expect(tools).toHaveLength(63);
+    expect(tools).toHaveLength(64);
     await cleanup();
   });
 
@@ -23,7 +23,7 @@ describe("tool registration", () => {
     );
     const { client, cleanup } = await connectTestClient(server);
     const { tools } = await client.listTools();
-    expect(tools).toHaveLength(39);
+    expect(tools).toHaveLength(40);
     for (const tool of tools) {
       expect(
         tool.annotations?.readOnlyHint,
@@ -42,7 +42,7 @@ describe("tool registration", () => {
     );
     const { client, cleanup } = await connectTestClient(server);
     const { tools } = await client.listTools();
-    expect(tools).toHaveLength(55);
+    expect(tools).toHaveLength(56);
     await cleanup();
   });
 
