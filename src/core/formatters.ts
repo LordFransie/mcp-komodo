@@ -682,6 +682,21 @@ export function formatUpdateDetail(update: Update): string {
 }
 
 // ---------------------------------------------------------------------------
+// Container list formatter
+// ---------------------------------------------------------------------------
+
+export function formatContainerList(
+  containers: { name: string; state: string; image?: string }[],
+): string {
+  if (!containers || containers.length === 0)
+    return "No containers found on this server.";
+  const lines = containers.map(
+    (c) => `- ${c.name} [${c.state}]${c.image ? ` image=${c.image}` : ""}`,
+  );
+  return `Found ${containers.length} container(s):\n${lines.join("\n")}`;
+}
+
+// ---------------------------------------------------------------------------
 // Log formatter
 // ---------------------------------------------------------------------------
 
