@@ -46,9 +46,7 @@ export function registerContainerTools(
       idempotentHint: true,
     },
     inputSchema: {
-      server: z
-        .string()
-        .describe("Server name or ID to list containers from"),
+      server: z.string().describe("Server name or ID to list containers from"),
     },
     handler: async (args) => {
       const serverParam = args.server as string;
